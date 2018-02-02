@@ -43,28 +43,8 @@ on_finish:
 
 environment:
   matrix:
-    - ruby_version: _trunk
-      b_config: "--use-system-libraries"
-    - ruby_version: 24
-      b_config: "--use-system-libraries"
-    - ruby_version: 24-x64
-      b_config: "--use-system-libraries"
-    - ruby_version: 23
-      ri_file: x86
     - ruby_version: 23-x64
       ri_file: x64
-    - ruby_version: 22
-      ri_file: x86
-    - ruby_version: 22-x64
-      ri_file: x64
-    - ruby_version: 21
-      DISABLE_SSL: true
-    - ruby_version: 21-x64
-      DISABLE_SSL: true
 
 cache:
   - av_bundle
-
-branches:
-  only:
-    - master
